@@ -1,0 +1,85 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "spacing": 0,
+
+  "modules-left": [
+    "river/tags",
+    "custom/sep",
+    "river/window"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/sep",
+    "network",
+    "custom/sep",
+    "battery",
+    "custom/sep",
+    "pulseaudio",
+    "custom/sep",
+    "backlight",
+    "custom/sep",
+    "clock"
+  ],
+
+  "river/tags": {
+    "num-tags": 5,
+    "tag-labels": ["1","2","3","4","5"],
+    "hide-vacant": false,
+    "disable-click": false
+  },
+
+  "river/window": {
+    "format": "{}",
+    "max-length": 40
+  },
+
+  "custom/sep": {
+    "exec": "echo ' │ '",
+    "interval": 3600,
+    "tooltip": false
+  },
+
+  "network": {
+    "format-wifi": "Online",
+    "format-ethernet": "Online",
+    "format-linked": "Online",
+    "format-disconnected": "Offline",
+    "tooltip": false
+  },
+
+  "battery": {
+    "states": { "warning": 30, "critical": 15 },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "{capacity}% {icon}",
+    "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": { "default": ["","",""] },
+    "tooltip": false
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["",""],
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip": false
+  }
+}

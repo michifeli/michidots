@@ -1,0 +1,81 @@
+@import "/home/samsepi0l/.config/theme/gruvbox.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Terminus", "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: @bg;
+  color: @fg;
+  /* IMPORTANTE: sin borde abajo (ese borde era el que hacía ver la línea “fuera”) */
+  border-bottom: none;
+  padding: 0 4px;
+}
+
+/* TAGS */
+#tags { margin: 0 2px; }
+
+#tags button {
+  background: transparent;
+  color: @muted;
+  min-width: 16px;
+  padding: 0 4px;
+  margin: 0 1px;
+  border-bottom: 2px solid transparent;
+}
+
+#tags button.focused {
+  color: @accent;
+  border-bottom-color: @accent;
+}
+
+#tags button.occupied { color: @fg; }
+
+#tags button.urgent {
+  color: @urgent;
+  border-bottom-color: @urgent;
+}
+
+/* Base módulos */
+#window, #network, #battery, #pulseaudio, #backlight, #cpu, #memory, #clock, #custom-power, #custom-sep {
+  padding: 0 6px;
+  color: @fg;
+  border-bottom: 2px solid transparent;
+}
+
+/* Separador */
+#custom-sep {
+  color: @sep;
+  padding: 0 4px;
+  border-bottom-color: transparent; /* sin línea */
+}
+
+/* Colores + líneas */
+#network    { color: @network;   border-bottom-color: @network; }
+#battery    { color: @battery;   border-bottom-color: @battery; }
+#pulseaudio { color: @audio;     border-bottom-color: @audio; }
+#backlight  { color: @backlight; border-bottom-color: @backlight; }
+#cpu        { color: @cpu;       border-bottom-color: @cpu; }
+#memory     { color: @memory;    border-bottom-color: @memory; }
+#clock      { color: @clock;     border-bottom-color: @clock; margin-right: 4px; }
+
+/* Batería estados */
+#battery.charging {
+  color: @accent;
+  border-bottom-color: @accent;
+}
+
+#battery.critical {
+  color: @urgent;
+  border-bottom-color: @urgent;
+}
+/* test */
