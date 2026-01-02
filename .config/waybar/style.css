@@ -16,12 +16,10 @@
 window#waybar {
   background: @bg;
   color: @fg;
-  /* IMPORTANTE: sin borde abajo (ese borde era el que hacía ver la línea “fuera”) */
   border-bottom: none;
   padding: 0 4px;
 }
 
-/* TAGS */
 #tags { margin: 0 2px; }
 
 #tags button {
@@ -45,21 +43,18 @@ window#waybar {
   border-bottom-color: @urgent;
 }
 
-/* Base módulos */
 #window, #network, #battery, #pulseaudio, #backlight, #cpu, #memory, #clock, #custom-power, #custom-sep {
   padding: 0 6px;
   color: @fg;
   border-bottom: 2px solid transparent;
 }
 
-/* Separador */
 #custom-sep {
   color: @sep;
   padding: 0 4px;
-  border-bottom-color: transparent; /* sin línea */
+  border-bottom-color: transparent;
 }
 
-/* Colores + líneas */
 #network    { color: @network;   border-bottom-color: @network; }
 #battery    { color: @battery;   border-bottom-color: @battery; }
 #pulseaudio { color: @audio;     border-bottom-color: @audio; }
@@ -68,7 +63,7 @@ window#waybar {
 #memory     { color: @memory;    border-bottom-color: @memory; }
 #clock      { color: @clock;     border-bottom-color: @clock; margin-right: 4px; }
 
-/* Batería estados */
+
 #battery.charging {
   color: @accent;
   border-bottom-color: @accent;
@@ -78,4 +73,3 @@ window#waybar {
   color: @urgent;
   border-bottom-color: @urgent;
 }
-/* test */
